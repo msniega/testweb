@@ -22,12 +22,21 @@
 
   <script>
     function dienas() {
-      let gads = document.getElementByld("gads").value;
-       let menesis = document.getElementByld("menesis").value;
-       let diena = document.getElementByld("diena").value;
+      let gads = document.getElementById("gads").value;
+       let menesis = document.getElementById("menesis").value;
+       let diena = document.getElementById("diena").value;
 
        let dzDiena = new Date(gads, menesis - 1, diena);
       let sodiena = new Date();
+
+      if(dzDiena , sodiena) {
+        edzDiena.setFullYear(sodiena.getFullYear() + 1);
+      }
+
+      let atlicis = Math.ceil((dzDiena - sodiena) / (1000 *60 * 60 * 24));
+
+      document.getElementById("rezultats").innerHTML = "Līdz svētkiem atlikušas:"+ atlicis + "dienas.";
+    }
       
   </script>
   
