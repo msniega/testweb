@@ -1,5 +1,3 @@
-
-new-folder/files2
 <html>
   <head>
     <title>mervienibas</title>
@@ -15,5 +13,17 @@ new-folder/files2
   <body>
 <h1>Informācijas daudzuma mērvienības</h1>
  <p style="color: LightSkyBlue; font-family: Times New Roman">  <a href="index.html" >uz portfolio</a></p>
+
+    <form id="convertForm">
+      <label for="gb">GB:</label>
+      <input type="number" id="gb" value="2">
+      <button type="button" onclick="convert()">Pārvest</button>
+
+      <p>Izteikt megabaitos: <input type="text" id="mb" readonly>MB </p>
+      <p>Izteikt megabaitos: <input type="text" id="mib" readonly>MiB </p>
+    </form>
+    <script scr="script.js"> </script>
     
+      
   </body>
+</html>
