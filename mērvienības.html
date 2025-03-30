@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>mervienibas</title>
     <style>
  h1, h2, h3{font-family:Arial Black; text-align: center}
@@ -7,7 +9,34 @@
    h1{color: navy}
    h2{color: steelblue}
    h3{color:darkblue}
-   body{background-color:lightcyan}
+   body{background-image: url('cipari.jpg');
+        background-size:cover;
+        font-family: Arial, sans-serif;
+       }
+      form{
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 10px
+      }
+      input 
+{ font-size: 20px;
+}
+      input[type="text"] {
+        width: 100px;
+      }
+      button{
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: darrkred;
+      }
     </style>
   </head>
   <body>
@@ -22,8 +51,18 @@
       <p>Izteikt megabaitos: <input type="text" id="mb" readonly>MB </p>
       <p>Izteikt megabaitos: <input type="text" id="mib" readonly>MiB </p>
     </form>
-    <script scr="script.js"> </script>
-    
+    <script>
+      function convert() {
+        let gb = document.getElementById("gb").value;
+        if (gb !==" ") {
+          let mb = gb * 1000;
+          let mib = gb * 1024
+          
+            document.getElementById("mb").value = mb.toFixed(2);
+           document.getElementById("mib").value = mb.toFixed(2);
+        }
+      }
+    </script>
       
   </body>
 </html>
